@@ -1,0 +1,24 @@
+{
+  "name": "synergia-erp",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "workspaces": [
+    "client",
+    "server", 
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "npm run dev --workspace=client",
+    "dev:server": "npm run dev --workspace=@synergia/server",
+    "build": "npm run build:types && npm run build:client && npm run build:server",
+    "build:types": "npm run build --workspace=@synergia/types",
+    "build:client": "npm run build --workspace=client",
+    "build:server": "npm run build --workspace=@synergia/server",
+    "postinstall": "npm run build:types"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
