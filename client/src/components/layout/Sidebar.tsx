@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils.ts';
 import { useAuthStore } from '@/stores/authStore';
 import { UserRole } from '@synergia/types';
 import {

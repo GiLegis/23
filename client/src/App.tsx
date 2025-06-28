@@ -12,8 +12,6 @@ import { ClientsPage } from '@/pages/ClientsPage';
 import { ProjectsPage } from '@/pages/ProjectsPage';
 import { UsersPage } from '@/pages/UsersPage';
 
-import './App.css';
-
 function App() {
   const { isAuthenticated, isLoading, loadUser } = useAuthStore();
 
